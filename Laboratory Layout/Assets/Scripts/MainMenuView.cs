@@ -21,7 +21,7 @@ public class MainMenuView : MonoBehaviour
     {
         levelMenu.SetActive(false);
         playButton.onClick.AddListener(OnplayButtonPressed);
-        playButton.onClick.AddListener(FillLevelMenu);
+        //playButton.onClick.AddListener(FillLevelMenu);
 
     }
 
@@ -29,6 +29,7 @@ public class MainMenuView : MonoBehaviour
     {
         playButton.gameObject.SetActive(false);
         ClearLevelMenu();
+        FillLevelMenu();
         levelMenu.SetActive(true);
     }
 
@@ -49,10 +50,7 @@ public class MainMenuView : MonoBehaviour
 
                 LevelButtonView.SetupLevelButton(i + 1, UnityEngine.Random.Range(_minstarscount, _maxstarscount));
             }
-            //if (levelbutton.TryGetComponent(out Button btn))
-            //{
-            //    btn.onClick.AddListener();
-            //}    
+
         }
     
     }
